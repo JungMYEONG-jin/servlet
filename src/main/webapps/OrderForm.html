@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>상품</title>
+</head>
+<body>
+<h1>상품 목록</h1>
+<form action="orderTest" method="post">
+    <table>
+        <tr>
+            <th>품목</th>
+            <th>단가</th>
+            <th>수량</th>\
+        </tr>
+        <tr>
+            <td><input type="radio" name="apple" value="apple">사과</td>
+            <td><input type="text" name="applePrice" value="5000" readonly/></td>
+            <td><input type="text" name="appleQty"></td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="grape" value="grape">포도</td>
+            <td><input type="text" name="grapePrice" value="10000" readonly/></td>
+            <td><input type="text" name="grapeQty"></td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="peach" value="peach">복숭아</td>
+            <td><input type="text" name="peachPrice" value="2000" readonly/></td>
+            <td><input type="text" name="peachQty"></td>
+        </tr>
+    <input type="submit" value="전송"/>
+    <input type="reset" value="초기화"/>
+</form>
+</body>
+</html>

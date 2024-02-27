@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+<body>
+<form action="queryTest" method="post">
+    ID : <input type="text" name="id"><br>
+    비밀번호 : <input type="password" name="pwd"><br>
+    이름 : <input type="text" name="name"><br>
+    취미 :
+    <input type="checkbox" name="hobby" value="climbing"/>등산
+    <input type="checkbox" name="hobby" value="sports"/>운동
+    <input type="checkbox" name="hobby" value="reading"/>독서
+    <input type="checkbox" name="hobby" value="traveling"/>여행<br>
+    성별 :
+    <input type="radio" name="gender" value="male"/>남자
+    <input type="radio" name="gender" value="female"/>여자<br>
+    도시 :
+    <select name="city">
+        <option value="seoul"/>서울
+        <option value="busan"/>부산
+        <option value="haenam" selected/>해남
+    </select> <br>
+<!--    종교 :-->
+<!--    <select name="religion">-->
+<!--        <option value="christ"/>기독교-->
+<!--        <option value="buddha"/>불교-->
+<!--        <option value="catholic"/>천주교-->
+<!--        <option value="atheism" selected/>무교-->
+<!--    </select> <br>-->
+    자기소개 : <br>
+    <textarea rows="" cols="" name="intro"></textarea>
+    <input type="submit" value="전송"/>
+    <input type="reset" value="초기화"/>
+</form>
+</body>
+</html>
