@@ -26,7 +26,7 @@ public class LogoutServlet extends HttpServlet {
             HttpSession session = req.getSession(false);
             if (session != null) {
                 session.invalidate();
-                writer.println(id + " are successfully logged out!");
+                writer.println(id + " successfully logged out!");
             } else {
                 writer.println("Login Session Disconnected. Your Request ignored..");
                 req.getRequestDispatcher("Login.html").include(req, resp);
