@@ -6,30 +6,32 @@
 </head>
 <body>
 <h1>상품 목록</h1>
-<form action="orderTest" method="post">
+<form action="orderFruit" method="post">
     <table>
         <tr>
             <th>품목</th>
             <th>단가</th>
-            <th>수량</th>\
+            <th>수량</th>
         </tr>
         <tr>
-            <td><input type="radio" name="apple" value="apple">사과</td>
+            <td><input type="radio" name="apple" value="사과">사과</td>
             <td><input type="text" name="applePrice" value="5000" readonly/></td>
             <td><input type="text" name="appleQty"></td>
         </tr>
         <tr>
-            <td><input type="radio" name="grape" value="grape">포도</td>
+            <td><input type="radio" name="grape" value="포도">포도</td>
             <td><input type="text" name="grapePrice" value="10000" readonly/></td>
             <td><input type="text" name="grapeQty"></td>
         </tr>
         <tr>
-            <td><input type="radio" name="peach" value="peach">복숭아</td>
+            <td><input type="radio" name="peach" value="복숭아">복숭아</td>
             <td><input type="text" name="peachPrice" value="2000" readonly/></td>
             <td><input type="text" name="peachQty"></td>
         </tr>
-    <input type="submit" value="전송"/>
+    <input type="submit" value="주문"/>
     <input type="reset" value="초기화"/>
+    <input formaction="clearCart" type="submit" value="장바구니비우기"/>
+    <input formaction="orderOutput" type="submit" value="장바구니보기"/>
 </form>
 </body>
 </html>
