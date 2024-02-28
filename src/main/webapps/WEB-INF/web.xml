@@ -41,6 +41,21 @@
     </servlet>
 
     <servlet>
+        <servlet-name>orderFruit</servlet-name>
+        <servlet-class>main.webapps.order.OrderServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>orderOutput</servlet-name>
+        <servlet-class>main.webapps.order.OrderOutputServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>clearCart</servlet-name>
+        <servlet-class>main.webapps.order.ClearCartServlet</servlet-class>
+    </servlet>
+
+    <servlet>
         <servlet-name>initParam</servlet-name>
         <servlet-class>main.webapps.InitParamServlet</servlet-class>
         <init-param>
@@ -62,6 +77,21 @@
     <servlet-mapping>
         <servlet-name>initParam</servlet-name>
         <url-pattern>/initParam</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>orderFruit</servlet-name>
+        <url-pattern>/orderFruit</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>orderOutput</servlet-name>
+        <url-pattern>/orderOutput</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>clearCart</servlet-name>
+        <url-pattern>/clearCart</url-pattern>
     </servlet-mapping>
 
 </web-app>

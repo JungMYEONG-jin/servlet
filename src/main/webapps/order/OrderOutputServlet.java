@@ -1,9 +1,6 @@
-package main.webapps;
-
-import main.webapps.order.Fruit;
+package main.webapps.order;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -14,7 +11,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet("/orderOutput")
+//@WebServlet("/orderOutput")
 public class OrderOutputServlet extends HttpServlet {
 
     @Override

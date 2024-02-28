@@ -1,4 +1,4 @@
-package main.webapps;
+package main.webapps.order;
 
 import main.webapps.order.Fruit;
 
@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
 
-@WebServlet("/orderFruit")
+//@WebServlet("/orderFruit")
 public class OrderServlet extends HttpServlet {
 
     public OrderServlet() {
