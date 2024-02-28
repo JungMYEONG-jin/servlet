@@ -192,5 +192,5 @@ Content           : <h1>Client request this uri by GET!<h1>Request Scheme : http
 servlet 과 동일하게 어노테이션 tag, 매핑 tag 가 쌍방으로 연결이 돼야한다.
 
 url-pattern 은 해당 필터를 적용해주고 싶은 url에 지정을 해주면 된다.
-나의 경우는 주문을 했을 경우 로그를 남기고 싶었기에 다음과 같이 order 부분에 필터를 적용하였다.
+만약 동일한 url-pattern 에 필터 순서를 변경하고 싶다면 filter-mapping 순서만 변경해주면 된다.
 
