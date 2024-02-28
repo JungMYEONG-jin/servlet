@@ -47,7 +47,6 @@ public class OrderServlet extends HttpServlet {
             price = Integer.parseInt(req.getParameter("applePrice"));
             qty = Integer.parseInt(req.getParameter("appleQty"));
         } else if (req.getParameter("grape") != null) {
-            System.out.println(" grape ");
             fruit = req.getParameter("grape");
             price = Integer.parseInt(req.getParameter("grapePrice"));
             qty = Integer.parseInt(req.getParameter("grapeQty"));
