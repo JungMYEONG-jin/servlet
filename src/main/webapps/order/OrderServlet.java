@@ -1,9 +1,6 @@
 package main.webapps.order;
 
-import main.webapps.order.Fruit;
-
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,7 +10,6 @@ import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Enumeration;
 import java.util.List;
 
 //@WebServlet("/orderFruit")
@@ -70,7 +66,8 @@ public class OrderServlet extends HttpServlet {
             session.setAttribute("cart", cart);
         }
         // move to cart page
-        req.getRequestDispatcher("orderOutput").forward(req, resp);
+        System.out.println("move jsp");
+        req.getRequestDispatcher("orderOutput.jsp").forward(req, resp);
         writer.close();
     }
 }
