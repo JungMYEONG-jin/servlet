@@ -10,7 +10,7 @@
    if(title.isEmpty() || author.isEmpty() || pub.isEmpty()){
            request.setAttribute("book", book);
            RequestDispatcher rd = request.getRequestDispatcher("book.jsp");
-           rd.forward(req, resp);
+           rd.forward(request, response);
    }else{
        out.print(book);
    }
