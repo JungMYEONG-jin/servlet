@@ -26,7 +26,7 @@ public class BookProcServlet extends HttpServlet {
         Book book = new Book(title, author, pub);
         // request
         req.setAttribute("book", book);
-        RequestDispatcher bookoutput = req.getRequestDispatcher("bookoutput");
+        RequestDispatcher bookoutput = req.getRequestDispatcher("bookResult.jsp");
         bookoutput.forward(req, resp);
         writer.close();
     }
