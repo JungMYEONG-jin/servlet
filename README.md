@@ -166,3 +166,31 @@ Content           : <h1>Client request this uri by GET!<h1>Request Scheme : http
 - ServletContext : 서버 시작시, 서버 종료시, web application 단위로 사용
 - HttpSession : client 접속시, client 종료시, client
 - HttpServletRequest : 요청시, 응답시, request
+
+
+## Filter
+![img_2.png](img_2.png)
+
+필터는 서블릿에 요청이 오기전에 요청을 가로채는 기능을 지원한다.
+기존 spring boot 같은 경우에는 코드내에서 적용을 해본 경험이 있을 것이다. 하지만 
+현 수업에서는 기본 원리를 이해하는게 목적이므로 직접 web.xml에 적용하여 적용해볼것이다.
+
+필터는 다음과 같은 tag를 사용하여 적용이 가능하다.
+
+```xml
+    <filter>
+        <filter-name>orderFilter</filter-name>
+        <filter-class>main.webapps.filter.OrderFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>orderFilter</filter-name>
+        <url-pattern>/orderFruit</url-pattern>
+    </filter-mapping>
+```
+
+servlet 과 동일하게 어노테이션 tag, 매핑 tag 가 쌍방으로 연결이 돼야한다.
+
+url-pattern 은 해당 필터를 적용해주고 싶은 url에 지정을 해주면 된다.
+나의 경우는 주문을 했을 경우 로그를 남기고 싶었기에 다음과 같이 order 부분에 필터를 적용하였다.
+
