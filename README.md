@@ -205,3 +205,7 @@ public interface ServletContextListener extends EventListener {
 contextInitialized 는 서버 시작시 서비스를 위한 준비작업을 하기 위해 사용된다.
 1. Listener 구현
 2. Listener 등록
+
+<%! %> 클래스에 들어감
+<% %> 서비스에 들어감(지역변수, 스크립트릿이라 부름
+<%= > == out,print()
