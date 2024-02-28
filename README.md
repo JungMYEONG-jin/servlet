@@ -194,3 +194,14 @@ servlet 과 동일하게 어노테이션 tag, 매핑 tag 가 쌍방으로 연결
 url-pattern 은 해당 필터를 적용해주고 싶은 url에 지정을 해주면 된다.
 만약 동일한 url-pattern 에 필터 순서를 변경하고 싶다면 filter-mapping 순서만 변경해주면 된다.
 
+
+```java
+public interface ServletContextListener extends EventListener {
+    void contextInitialized(ServletContextEvent var1);
+
+    void contextDestroyed(ServletContextEvent var1);
+}
+``` 
+contextInitialized 는 서버 시작시 서비스를 위한 준비작업을 하기 위해 사용된다.
+1. Listener 구현
+2. Listener 등록
