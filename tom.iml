@@ -7,6 +7,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="eclipse.ecf.javax.servlet" level="project" />
+    <orderEntry type="library" name="javax.servlet.api" level="project" />
+    <orderEntry type="library" name="javax.servlet.jstl" level="project" />
+    <orderEntry type="library" name="javax.servlet.jsp.api" level="project" />
   </component>
 </module>

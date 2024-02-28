@@ -17,4 +17,6 @@
                 <%= "<h1>Your Shopping cart is Empty!!<br>" %>
             <% } %>
 </body>
+
+<hr> ${total}
 </html>
