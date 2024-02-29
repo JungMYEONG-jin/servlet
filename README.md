@@ -209,3 +209,13 @@ contextInitialized 는 서버 시작시 서비스를 위한 준비작업을 하�
 <%! %> 클래스에 들어감
 <% %> 서비스에 들어감(지역변수, 스크립트릿이라 부름
 <%= > == out,print()
+
+
+### JSP 자바빈즈
+- 패키지화
+- 기본 생성자 존재
+- 멤버변수는 private
+- getter, setter 설정
+- public으로 getter, setter선언
+- 직렬화구현은 선택
+

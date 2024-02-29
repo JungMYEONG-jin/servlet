@@ -15,6 +15,9 @@ public class Book {
     }
 
     public Book() {
+        title="";
+        author="";
+        pub="";
     }
 
     public Book(String title, String author, String pub) {
