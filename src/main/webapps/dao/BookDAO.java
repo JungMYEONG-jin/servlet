@@ -1,6 +1,12 @@
 package main.webapps.dao;
 
-import java.sql.*;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.UUID;
 
 public class BookDAO {
@@ -13,9 +19,10 @@ public class BookDAO {
         PreparedStatement psm = null;
         ResultSet resultSet = null;
         try {
-            Class.forName("oracle.jdbc.driver.OracleDriver");
-            String url = "jdbc:oracle:thin:@localhost:1521:xe";
-            con = DriverManager.getConnection(url, "scott", "tiger");
+            InitialContext initialContext = new InitialContext();
+            DataSource ds = (DataSource) initialContext.lookup("java:comp/env/jdbc/myoracle");
+            con = ds.getConnection();
+
             String insert = "INSERT INTO BOOKS VALUES(?, ?, ?, ?)";
             psm = con.prepareStatement(insert);
             psm.setString(1, UUID.randomUUID().toString());
@@ -27,12 +34,13 @@ public class BookDAO {
             if (affected == 1) {
                 System.out.println("insert success");
             }
-        } catch (SQLException | ClassNotFoundException e) {
+
+        } catch (NamingException | SQLException e) {
             throw new RuntimeException(e);
         }finally {
             if (resultSet != null) try { resultSet.close(); } catch(Exception e) {}
             if (psm != null) try { psm.close(); } catch(Exception e) {}
-            if (con != null) try { con.close(); } catch(Exception e) {}
+//            if (con != null) try { con.close(); } catch(Exception e) {}
         }
     }
 }

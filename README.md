@@ -219,3 +219,14 @@ contextInitialized 는 서버 시작시 서비스를 위한 준비작업을 하�
 - public으로 getter, setter선언
 - 직렬화구현은 선택
 
+> javax.servlet.ServletException: java.lang.AbstractMethodError: oracle.jdbc.driver.T4CConnection.isValid(I)Z
+
+해당 문제는 jndi 사용시 jdbc library 버전이 달라서 생기는 문제다. 즉 interface는 존재하지만 구현체가 없어서 에러가 나는것이다.
+기존 ojdbc14 에서 ojdbc6으로 변경하여 해당 에러를 해결하였다.
+
+new InitialContext()
+```jsp
+<%@ page import="java.sql.*" %>
+<%@ page import="javax.sql.*" %>
+<%@ page import="javax.naming.*" %>
+```
