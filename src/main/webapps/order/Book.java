@@ -1,6 +1,9 @@
 package main.webapps.order;
 
+import java.util.UUID;
+
 public class Book {
+    private String id;
     private String title;
     private String author;
     private String pub;
@@ -15,12 +18,18 @@ public class Book {
     }
 
     public Book() {
+        id = UUID.randomUUID().toString();
         title="";
         author="";
         pub="";
     }
 
     public Book(String title, String author, String pub) {
+        this(UUID.randomUUID().toString(), title, author, pub);
+    }
+
+    public Book(String id, String title, String author, String pub) {
+        this.id = id;
         this.title = title;
         this.author = author;
         this.pub = pub;

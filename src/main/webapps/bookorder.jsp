@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ page import="main.webapps.order.Book"%>
+<%@ page import="main.webapps.dao.BookDAO"%>
 
 
 <jsp:useBean id="vo" class="main.webapps.order.Book"/>
@@ -24,7 +25,9 @@
               rd.forward(request, response);
       }else{
           out.print(vo);
+
+          /* insert */
+          BookDAO dao = new BookDAO();
+          dao.insert(vo.getTitle(), vo.getAuthor(), vo.getPub());
    }
-
-
 %>
