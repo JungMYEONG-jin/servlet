@@ -10,5 +10,14 @@
     <orderEntry type="library" name="javax.servlet.api" level="project" />
     <orderEntry type="library" name="javax.servlet.jstl" level="project" />
     <orderEntry type="library" name="javax.servlet.jsp.api" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://C:/Program Files/Java/jdk1.8.0_91/jre/lib/ojdbc14" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
