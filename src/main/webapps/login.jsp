@@ -13,7 +13,7 @@
 %>
 <%= error %>
 <form action="logout.jsp" method="post">
-    Name:<input type="text" name="id"><br>
+    ID:<input type="text" name="id"><br>
     Password:<input type="password" name="pwd"><br>
     <input type="submit" value="login">
 </form>

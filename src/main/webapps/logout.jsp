@@ -1,4 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="java.util.*"%>
+<%@ page import="main.webapps.dao.UserDAO"%>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -15,7 +17,11 @@
             rd.forward(request, response);
             return;
         }
-        if(pwd.equals("admin123")){
+
+        UserDAO dao = new UserDAO();
+        boolean res = dao.check(id, pwd);
+
+        if(res){
             if(session.isNew() || session.getAttribute("id") == null){
                 session.setAttribute("id", id);
                 System.out.println("login!");
